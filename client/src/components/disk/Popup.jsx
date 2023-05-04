@@ -11,7 +11,9 @@ const Popup = () => {
     const dispatch = useDispatch()
 
     function createHandler() {
-        dispatch(creatDir(currentDir, dirName))
+        dispatch(creatDir(currentDir, dirName));
+        setDirName('');
+        dispatch(setPopupDisplay('none'))
     }
 
     return (
